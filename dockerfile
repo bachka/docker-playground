@@ -8,7 +8,7 @@ RUN apk add --update nginx && \
 
 COPY nginx.conf etc/nginx/nginx.conf
 COPY default.conf /etc/nginx/conf.d/default.conf
-ADD html.tar.gz /usr/share/nginx/
+ADD files/html.tar.gz /usr/share/nginx/
 
 EXPOSE 80/tcp
 
