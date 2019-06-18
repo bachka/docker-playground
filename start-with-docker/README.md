@@ -1,5 +1,11 @@
 # Run the app
 
+Build docker image:
+
+```
+docker build -tag docker-registry.intrafind.net/intrafind/friendly-hello:$tag .
+```
+
 Run the app, mapping your machine’s port 4000 to the container’s published port 80 using -p:
 
 ```
@@ -42,6 +48,12 @@ docker pull docker-registry.intrafind.net/intrafind/friendly-hello:latest
 docker run -p 4000:80 docker-registry.intrafind.net/intrafind/friendly-hello:latest
 ```
 
+Logs from container:
+
+```
+docker logs friendly-hello
+docker logs -f friendly-hello
+```
 
 ## Cheat sheets from https://docs.docker.com
 
