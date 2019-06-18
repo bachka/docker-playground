@@ -3,7 +3,7 @@
 Build docker image:
 
 ```
-docker build -tag docker-registry.intrafind.net/intrafind/friendly-hello:$tag .
+docker build -tag docker-registry.intrafind.net/intrafind/friendly-hello:latest .
 ```
 
 Run the app, mapping your machine’s port 4000 to the container’s published port 80 using -p:
