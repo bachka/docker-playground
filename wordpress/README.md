@@ -15,3 +15,9 @@ curl -LO https://raw.githubusercontent.com/bitnami/bitnami-docker-wordpress/mast
 ```
 docker-compose up -d
 ```
+
+### If network used
+
+```
+docker rm -f $(docker ps -aq)
+```
