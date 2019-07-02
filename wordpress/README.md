@@ -23,3 +23,13 @@ docker rm -f $(docker ps -aq)
 netstat -pna | grep 443
 kill PROCESS_ID
 ```
+
+### to stop
+```
+docker-compose down
+```
+
+### to remove volume with
+```
+docker-compose down -v
+```
