@@ -20,4 +20,6 @@ docker-compose up -d
 
 ```
 docker rm -f $(docker ps -aq)
+netstat -pna | grep 443
+kill PROCESS_ID
 ```
