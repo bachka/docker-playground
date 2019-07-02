@@ -13,8 +13,8 @@ services:
     ports:
       - "4000:80"
     networks:
-      - friendly-hello-network
+      - webnet
 
 networks:
   webnet:
-    external: true
+#    external: true
