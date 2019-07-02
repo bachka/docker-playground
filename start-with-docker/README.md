@@ -5,11 +5,20 @@ Build docker image:
 ```
 docker build -tag docker-registry.intrafind.net/intrafind/friendly-hello:latest .
 ```
+or just:
+``` 
+docker build -tag friendly-hello:latest .
+```
+then run and test then tag and push to repo:
+```
+docker tag friendly-hello:latest docker-registry.intrafind.net/intrafind/friendly-hello:latest
+docker push docker-registry.intrafind.net/intrafind/friendly-hello:latest
+```
 
 Run the app, mapping your machine’s port 4000 to the container’s published port 80 using -p:
 
 ```
-docker run -p 4000:80 friendly-hello
+docker run -p 4000:80 docker-registry.intrafind.net/intrafind/friendly-hello:latest
 ```
 
 You should see a message that Python is serving your app at http://0.0.0.0:80. But that message is coming from inside the container, which doesn’t know you mapped port 80 of that container to 4000, making the correct URL http://localhost:4000.
